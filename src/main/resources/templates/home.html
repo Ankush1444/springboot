@@ -7,9 +7,22 @@
     <title>Home</title>
 </head>
 <body>
-    <h1>
-        name:<p data-th-text="${name}">
-        </p>
-    </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name:</th>
+                <th>Location:</th>
+                <th>Eduaction:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="st:${students}">
+                <td data-th-text="${st.name}"></td>
+                <td data-th-text="${st.location}"></td>
+                <td data-th-text="${st.education}"></td>
+            </tr>
+        </tbody>
+    </table>
+    
 </body>
 </html>
